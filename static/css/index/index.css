@@ -1,0 +1,97 @@
+section {
+    padding: var(--default-padding);
+    background-color: var(--background-light);
+    color: var(--text-light);
+    height: 100vh;
+    position: relative;
+}
+
+section h1 {
+    font-size: 50px;
+}
+
+section h1:not(:first-of-type) {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.little-underline {
+    height: 3px;
+    width: 7%;
+    margin-top: 20px;
+    background-color: var(--text-light);
+}
+
+hr {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* HERO SECTION */
+
+#hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    padding: var(--default-padding);
+    transition: var(--default-trnasition);
+}
+
+.light-theme-background {
+    background: linear-gradient(rgba(122, 122, 122, 0.6), rgb(255, 255, 255, 0.6)), url('../../images/home-bg.JPG'); 
+}
+
+.dark-theme-background {
+    background: linear-gradient(rgba(46, 67, 71, 0.8), rgb(12, 22, 24, 0.8)), url('../../images/home-bg.JPG');
+}
+
+
+.details h1 {
+    color: var(--text-light);
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.details h1 span {
+    font-weight: normal;
+}
+
+.details p {
+    color: var(--text-light);
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.details p span {
+    color: var(--primary-color);
+    text-decoration: dotted underline;
+}
+
+.my-picture {
+    height: 75%;
+    width: 50%;
+    background-image: url('../../images/joseph.jpg'); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 20%;
+    border-radius: 50%;
+}
+
+
+/* ABOUT SECTION */
+
+#about-section {
+
+}
+
+/* SERVICES SECTION */
+
+#services-section {
+    
+}

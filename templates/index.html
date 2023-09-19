@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagename %}My Profile{% endblock %}
+
+{% block external_css %}
+    <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+{% endblock %}
+
+{% block body %}
+    <!-- HERO -->
+    <section id="hero" class="light-theme-background">
+        <div class="details" data-aos="fade-in">
+            <h1>ADEGBEHINGBE <br> <span>Oluwakorede Joseph</span></h1>
+            <p>I am a <span>Python Developer and Flutter Developer</span></p>
+        </div>
+
+        <div class="my-picture" data-aos="zoom-in"></div>
+    </section>
+    <!-- END HERO -->
+
+    <!-- ABOUT -->
+    <section id="about-section">
+        <h1>About Me</h1>
+        <div class="little-underline"></div>
+        <div></div>
+        <hr>
+    </section>
+    <!-- END ABOUT -->
+
+
+    <!-- MY SERVICES -->
+    <section id="services-section">
+        <h1>My Services</h1>
+        <div class="little-underline"></div>
+        <div></div>
+        <hr>
+    </section>
+    <!-- END MY SERVICES -->
+{% endblock %}

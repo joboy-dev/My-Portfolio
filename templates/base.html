@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joboy Dev's Portfolio- {% block pagename %}{% endblock %}</title>
+<!-- 
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+    
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/e883737a77.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block external_css %}{% endblock %}
+    {% block internal_css %}{% endblock %}
+</head>
+<body>
+    <div id="content">
+        <nav class="navbar" data-aos="slide-right">
+            <div class="dark-mode">
+                <i id="dark-mode-icon" class="fa-solid fa-moon"></i>
+            </div>
+
+            <div class="picture" data-aos="zoom-in"></div>
+
+            <h1 data-aos="zoom-in">Adegbehingbe, <span>Oluwakorede Joseph</span></h1>
+
+            <div class="social-links" data-aos="fade-in">
+                <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/"><i class="fa-brands fa-linkedin" target="_blank"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter" target="_blank"></i></a>
+            </div>
+
+            <hr><br>
+
+            <ul class="nav-links" data-aos="slide-right">
+                <li>
+                    <i class="fa-solid fa-house fa-beat"></i>
+                    <a href="#" id="home" class="">Home</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user fa-beat"></i>
+                    <a href="#"id="about" class="">About</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-server fa-beat"></i>
+                    <a href="#" id="services" class="">Services</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-folder fa-beat"></i>
+                    <a href="#" id="projects" class="">Projects</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope fa-beat"></i>
+                    <a href="#"id="contact" class="">Contact</a>
+                </li>
+            </ul>
+
+            <div class="download-resume" data-aos="zoom-in">
+                <i class="fa-solid fa-download"></i>
+                <a href="{% static 'Adegbehingbe Oluwakorede Joseph CV.pdf' %}" download="Adegbehingbe Oluwakorede Joseph Resume">Resume</a>
+            </div>
+
+            <p class="copyright">&copy; Copyright <b>{{ year }}</b>, <em>Joboy-dev</em></p>
+        </nav>
+
+        <div class="body">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
+    <script src="{% static 'js/load_aos.js' %}"></script>
+    <script src="{% static 'js/dark_mode_switch.js' %}"></script>
+</body>
+</html>
