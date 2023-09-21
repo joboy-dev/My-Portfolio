@@ -12,3 +12,10 @@ class HomeView(View):
     
     def get(self, request):
         return render(request, 'index.html', context)
+
+
+class AboutMeView(View):
+    '''View for about me page'''
+    
+    def get(self, request):
+        return render(request, 'about-me.html', context)

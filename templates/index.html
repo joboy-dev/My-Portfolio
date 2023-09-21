@@ -21,20 +21,199 @@
 
     <!-- ABOUT -->
     <section id="about-section">
-        <h1>About Me</h1>
+        <div class="heading">
+            <i class="fa-solid fa-user"></i>
+            <h1>About Me</h1>
+        </div>
         <div class="little-underline"></div>
-        <div></div>
+        <div class="container">
+            <div class="about-content">
+                <div class="my-picture"></div>
+                <p>
+                    I am a computer scientist who recenty graduated from Babcock University. I am also a very passionate and results-driven Python and Flutter developer with over 2 years of hands-on coding experience. I specialize in creating web and mobile applications that not only look great but also deliver exceptional user experiences because I believe that I won't want other people to use a product that I myself won't enjoy.
+                </p>
+
+                <a href="#" class="btn">See more</a>
+
+            </div>
+        </div>
+
         <hr>
     </section>
     <!-- END ABOUT -->
 
 
+    <!-- PROJECTS -->
+    <section id="projects-section">
+        <div class="heading">
+            <i class="fa-solid fa-folder"></i>
+            <h1>My Projects</h1>
+        </div>
+        <div class="little-underline"></div>
+
+        <p class="head-text">Here are some of the projects I have worked on: </p>
+
+        <div class="container">
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loadinf="lazy" alt="pic">
+                </div>
+                <a href="#" class="project-name">Project Name</a>
+                <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque, numquam quis pariatur esse similique magni fuga autem earum velit nostrum officia assumenda?</p>
+
+                <div class="links">
+                    <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/" target="_blank"><i class="fa-brands fa-postman"></i>Postman Docs</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loadinf="lazy" alt="pic">
+                </div>
+                <a href="#" class="project-name">Project Name</a>
+                <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque, numquam quis pariatur esse similique magni fuga autem earum velit nostrum officia assumenda?</p>
+
+
+                <div class="links">
+                    <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/" target="_blank"><i class="fa-brands fa-postman"></i>Postman Docs</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loadinf="lazy" alt="pic">
+                </div>
+                <a href="#" class="project-name">Project Name</a>
+                <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque, numquam quis pariatur esse similique magni fuga autem earum velit nostrum officia assumenda?</p>
+
+                <div class="links">
+                    <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/" target="_blank"><i class="fa-brands fa-postman"></i>Postman Docs</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+
+        <hr>
+    </section>
+    <!-- END PROJECTS -->
+
     <!-- MY SERVICES -->
     <section id="services-section">
-        <h1>My Services</h1>
+        <div class="heading">
+            <i class="fa-solid fa-server"></i>
+            <h1>My Services</h1>
+        </div>
         <div class="little-underline"></div>
-        <div></div>
+
+        <p class="head-text">Here are the services I offer based on my area of expertise.<br>These are what I bring to the table:</p>
+        <div class="container">
+            <div class="service">
+                <div class="icon">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                
+                <div class="service-content">
+                    <h2 class="service-heading">Python Development</h2>
+                    <p class="service-body">I have a strong command of python and its frameworks, enabling me to develop robust backend solutions, APIs, data analysis tools and more.</p>
+
+                    <h4>Relevant Skills</h4>
+                    <p class="skills">Python Scripting, Django, Django Rest Framework, Flask, Data Science</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                
+                <div class="service-content">
+                    <h2 class="service-heading">Mobile App Development</h2>
+                    <p class="service-body">My proficiency in Flutter allows me to build cross-platform mobile apps with a single codebase, ensuring efficiency and consistency.</p>
+
+                    <h4>Relevant Skills</h4>
+                    <p class="skills">Dart, Flutter, Firebase</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <i class="fa-solid fa-file-code"></i>
+                </div>
+                
+                <div class="service-content">
+                    <h2 class="service-heading">Backend Web Development</h2>
+                    <p class="service-body">As a backend web developer, I specialize in creating the server-side logic and infrastructure that powers websites and web applications. I work with Python majorly to handle data, authentication, and other critical functions behind the scenes.</p>
+
+                    <h4>Relevant Skills</h4>
+                    <p class="skills">Django, Django Rest Framework, Flask</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                
+                <div class="service-content">
+                    <h2 class="service-heading">Frontend Web Development</h2>
+                    <p class="service-body">Frontend web development is all about creating the user interface and user experience of a website. I design and build visually appealing, responsive, and interactive web pages using HTML, CSS, and JavaScript.</p>
+
+                    <h4>Relevant Skills</h4>
+                    <p class="skills">HTML, CSS, JavaScript, Tailwind CSS, Bootstrap</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <i class="fa-solid fa-code-branch"></i>
+                </div>
+                
+                <div class="service-content">
+                    <h2 class="service-heading">Deployment & Version Control</h2>
+                    <p class="service-body">I am experienced in deploying web applications to production servers, ensuring they are accessible to users. I'm also well-versed in version control systems like Git, which helps in tracking changes to code, collaborating with other developers, and maintaining a stable and efficient codebase.</p>
+
+                    <h4>Relevant Skills</h4>
+                    <p class="skills">Render, Heroku, Git</p>
+                </div>
+            </div>
+        </div>
+
         <hr>
     </section>
     <!-- END MY SERVICES -->
+
+    <!-- CONTACT -->
+    <section id="contact-section">
+        <div class="heading">
+            <i class="fa-solid fa-envelope"></i>
+            <h1>Contact Me</h1>
+        </div>
+        <div class="little-underline"></div>
+        
+        <div class="container">
+            <div>
+                <p class="head-text">I am always looking for new opportunities to learn and grow in the software industry.<br>If you have any questions or you would like more information as to what I do, feel free to reach out.</p>
+
+                <a href="#" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT -->
 {% endblock %}
+
+
+
+<!-- What I Bring to the Table
+
+Expertise in Python: I have a strong command of Python and its frameworks, enabling me to develop robust back-end solutions, data analysis tools, and more.
+
+Flutter Mastery: My proficiency in Flutter allows me to build cross-platform mobile apps with a single codebase, ensuring efficiency and consistency.
+
+Problem Solver: I thrive on tackling complex challenges and finding innovative solutions that exceed client expectations. -->
+

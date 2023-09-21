@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="--background-dark: #0c1618; --text-dark: #f1f1f1; --background-light: #f1f1f1; --text-light: #0c1618;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
-    
+
     <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,23 +48,23 @@
             <ul class="nav-links" data-aos="slide-right">
                 <li>
                     <i class="fa-solid fa-house fa-beat"></i>
-                    <a href="#" id="home" class="">Home</a>
+                    <a href="{% url 'portfolio:home' %}" id="home" class="">Home</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-user fa-beat"></i>
-                    <a href="#"id="about" class="">About</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-server fa-beat"></i>
-                    <a href="#" id="services" class="">Services</a>
+                    <a href="{% url 'portfolio:about' %}"id="about" class="">About Me</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-folder fa-beat"></i>
-                    <a href="#" id="projects" class="">Projects</a>
+                    <a href="#" id="projects" class="">My Projects</a>
                 </li>
+                <!-- <li>
+                    <i class="fa-solid fa-server fa-beat"></i>
+                    <a href="#services-section" id="services" class="">Services</a>
+                </li> -->
                 <li>
                     <i class="fa-solid fa-envelope fa-beat"></i>
-                    <a href="#"id="contact" class="">Contact</a>
+                    <a href="#"id="contact" class="">Contact Me</a>
                 </li>
             </ul>
 
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <script src="{% static 'js/load_aos.js' %}"></script>
     <script src="{% static 'js/dark_mode_switch.js' %}"></script>
+    <script src="{% static 'js/load_aos.js' %}"></script>
 </body>
 </html>

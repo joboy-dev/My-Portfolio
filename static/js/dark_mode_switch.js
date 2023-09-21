@@ -3,8 +3,14 @@ var root = document.querySelector(':root')
 
 var heroSection = document.querySelector('#hero')
 
-var darkColor = '#004643'
-var lightColor = '#ffffff'
+var darkColor = '#0c1618'
+var lightColor = '#f1f1f1'
+
+// Check local storage for dark mode preference on page load
+const savedDarkMode = localStorage.getItem('darkmode');
+if (savedDarkMode === 'true') {
+    toggleDarkMode();
+}
 
 function toggleDarkMode() {
     var darkModeIcon = document.getElementById('dark-mode-icon')
@@ -23,7 +29,7 @@ function toggleDarkMode() {
         heroSection.classList.remove('light-theme-background')
         heroSection.classList.add('dark-theme-background')
 
-        return true
+        localStorage.setItem('darkmode', 'true')
     } else {
         // Switch to light mode
         root.style.setProperty("--background-dark", darkColor);
@@ -38,10 +44,8 @@ function toggleDarkMode() {
         heroSection.classList.remove('dark-theme-background')
         heroSection.classList.add('light-theme-background')
 
-        return false
+        localStorage.setItem('darkmode', 'false')
     }
 }
 
-darkModeSwitch.addEventListener('click', () => {
-    toggleDarkMode()
-});
+darkModeSwitch.addEventListener('click', toggleDarkMode);
