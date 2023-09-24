@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagename %}My Projects{% endblock %}
+
+{% block external_css %}
+    <link rel="stylesheet" href="{% static 'css/project-detail/project-detail.css' %}" media="screen and (max-width:1980px)">
+    <link rel="stylesheet" href="{% static 'css/project-detail/project-detail-tab.css' %}" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="{% static 'css/project-detail/project-detail-mobile.css' %}" media="screen and (max-width:540px)">
+{% endblock %}
+
+{% block internal_css %}
+    <style>
+
+        .light-theme-background {
+            background: linear-gradient(rgba(107, 107, 107, 0.3), rgba(184, 184, 184, 0.3)), url("{% static 'media/default.JPG' %}"); 
+        }
+        
+        .dark-theme-background {
+            background: linear-gradient(rgba(46, 67, 71, 0.3), rgb(12, 22, 24, 0.5)), url("{% static 'media/default.JPG' %}");
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!-- HERO -->
+    <section id="hero" class="light-theme-background">
+        <div class="hero-content" data-aos="fade-in">
+            <h1>PROJECT NAME</h1>
+            <p>Project Description</p>
+        </div>
+    </section>
+    <!-- END HERO -->
+
+    <section id="project-details-section">
+        <div class="container">
+            <div class="project-overview">
+                <div>
+                    <h2>Project Overview</h2>
+                    <hr width="10%"><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellendus placeat labore unde assumenda ut iste adipisci maiores nisi earum sunt voluptates libero, voluptatibus quo vero, minus quibusdam quos quaerat!</p>
+                </div>
+
+                <div>
+                    <h2>Tools Used</h2>
+                    <hr width="10%"><br>
+                    <ul>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>Beautiful Soup</li>
+                        <li>Data Science</li>
+                        <li>Selenium</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="project-detail">
+                <div class="main-detail">
+                    <div>
+                        <span>Date: </span>
+                        <p>23-01-2023</p>
+                    </div>
+                    <div>
+                        <span>Domain: </span>
+                        <p>Web Development</p>
+                    </div>
+                    <div>
+                        <span>Type: </span>
+                        <p>Single</p>
+                    </div>
+                    <div>
+                        <span>Role: </span>
+                        <p>Mobile App Developer</p>
+                    </div>
+                    <div>
+                        <span>Client: </span>
+                        <p>None</p>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <a href="#" target="_blank">View Live Project > </a>
+                    <a href="#" target="_blank">View on Github <i class="fa-brands fa-github"></i></a>
+                    <a href="#" target="_blank">View Postman Docs</a>
+                    <a href="#" target="_blank">View Figma Design <i class="fa-brands fa-figma"></i></a>
+                    <a href="#" target="_blank">Google Drive <i class="fa-brands fa-google-drive"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

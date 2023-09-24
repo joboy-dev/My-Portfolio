@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views import View
+from django.views.generic import DetailView
 from django.core.mail import send_mail
 
 from datetime import datetime
@@ -11,7 +12,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 from .forms import ContactForm
-from .models import Contact
+from .models import Contact, Project
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -106,4 +107,16 @@ class ContactMeView(View):
         # form data will be rendered with the form
         context['form'] = form
         return render(request, 'contact-me.html', context)
+    
+    
+# class GetProjectDetailsView(DetailView):
+#     model = Project
+#     template_name = ''
+
+class GetProjectDetailsView(View):
+    '''View to get project details'''
+    
+    def get(self, request):
+        context['active_link'] = 'projects'
+        return render(request, 'project-detail.html', context)
 

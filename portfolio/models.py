@@ -8,11 +8,12 @@ class Project(models.Model):
         ('J', 'Joint'),
     ]
     
+    id = models.UUIDField(primary_key=bool, null=False)
     name = models.CharField(null=False, unique=True, max_length=200)
     description = models.TextField(null=False, max_length=250)
     overview = models.TextField(null=False, default='No overview for this project.')
-    cover_picture = models.ImageField(null=True, upload_to='pictures', default='pictures/default.JPG')
-    detail_cover_picture = models.ImageField(null=True, upload_to='pictures', default='pictures/default.JPG')
+    cover_picture = models.ImageField(null=True, upload_to='project', default='default.JPG')
+    detail_cover_picture = models.ImageField(null=True, upload_to='project', default='default.JPG')
     tools = models.CharField(null=False, max_length=1000, default='')
     domain = models.CharField(null=False, max_length=100, default='')
     type_of_project = models.CharField(choices=project_type, null=False, max_length=20, default='S')
@@ -47,6 +48,7 @@ class Experience(models.Model):
     '''Work experience model'''
     
     company_name = models.CharField(null=False, max_length=200, unique=True)
+    company_picture = models.ImageField(null=True, upload_to='experience', default='default.JPG')
     address = models.TextField(null=False)
     role = models.CharField(null=False, max_length=200)
     date_started = models.DateField(null=False)
@@ -63,6 +65,7 @@ class Education(models.Model):
     '''Education background model'''
     
     school_name = models.CharField(null=False, max_length=200, unique=True)
+    school_picture = models.ImageField(null=True, upload_to='education', default='default.JPG')
     address = models.TextField(null=False)
     course_studied = models.CharField(null=False, max_length=200)
     grade = models.CharField(null=True, max_length=200)
@@ -79,7 +82,7 @@ class Award(models.Model):
     award = models.CharField(null=False, max_length=400)
     award_description = models.TextField(null=False)
     issuer = models.CharField(null=False, max_length=200)
-    issuer_picture = models.ImageField(null=True, upload_to='pictures', default='pictures/default.JPG')
+    issuer_picture = models.ImageField(null=True, upload_to='award', default='default.JPG')
     date_received = models.DateField(null=False)
     
     def __str__(self):
@@ -90,7 +93,7 @@ class Certification(models.Model):
     '''Certifications model'''
     
     issuer = models.CharField(null=False, max_length=200)
-    issuer_picture = models.ImageField(null=True, upload_to='pictures', default='pictures/default.JPG')
+    issuer_picture = models.ImageField(null=True, upload_to='certification', default='default.JPG')
     certification = models.CharField(null=False, max_length=200)
     issue_date = models.DateField(null=False)
     certification_number = models.CharField(null=True, max_length=200)
@@ -98,6 +101,16 @@ class Certification(models.Model):
     
     def __str__(self):
         return f'{self.issuer} || {self.certification}'
+    
+
+class Skill(models.Model):
+    '''Skills model'''
+    
+    skill_name = models.CharField(null=False, max_length=200)
+    proficiency = models.IntegerField(null=False, validators=[])
+    
+    def __str__(self):
+        return f'{self.skill_name}- {self.proficiency}'
     
     
 

@@ -97,7 +97,7 @@
     padding: var(--default-padding);
     color: var(--primary-color);
     font-size: 0.5rem;
-    text-align: justify;
+    text-align: left;
     font-weight: 600;
 }
 

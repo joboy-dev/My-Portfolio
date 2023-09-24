@@ -34,8 +34,20 @@ cancel.addEventListener('click', closeNavbar)
 navLinks.forEach((link) => closeNavbar)
 
 
-const mq = window.matchMedia('screen and (max-width: 1024px)');
+// window.addEventListener('orientationchange', () => {
+//     var mq = window.matchMedia('screen and (max-width: 1024px)');
+    
+//     if (mq.matches) {
+//         menu.classList.remove('icon-none')
+//         cancel.classList.remove('icon-none')
+//     } else {
+//         menu.classList.add('icon-none')
+//         cancel.classList.add('icon-none')
+//     }
+// })
 
+var mq = window.matchMedia('screen and (max-width: 1024px)');
+    
 if (mq.matches) {
     menu.classList.remove('icon-none')
     cancel.classList.remove('icon-none')
@@ -43,5 +55,3 @@ if (mq.matches) {
     menu.classList.add('icon-none')
     cancel.classList.add('icon-none')
 }
-// window.addEventListener('orientationchange', () => {
-// })
