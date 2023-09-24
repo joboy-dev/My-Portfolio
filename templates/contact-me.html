@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagename %}Contact Me{% endblock %}
+
+{% block external_css %}
+    <link rel="stylesheet" href="{% static 'css/contact/contact.css' %}" media="screen and (max-width:1980px)">
+    <link rel="stylesheet" href="{% static 'css/contact/contact-tab.css' %}" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="{% static 'css/contact/contact-mobile.css' %}" media="screen and (max-width:540px)">
+{% endblock %}
+
+{% block body %}
+    <!-- HERO -->
+    <section id="hero" class="light-theme-background">
+        <div class="hero-content" data-aos="fade-in">
+            <h1>CONTACT ME</h1>
+            <p>I am always looking for opportunities to grow as a developer. <br><br>If you have any questions or you would like more information as to what I do, feel free to reach out through the form provided below or reach out to me through my contact information.</p>
+        </div>
+    </section>
+    <!-- END HERO -->
+
+    <section id="contact-me">
+        <div class="contact-info">
+            <h1>Contact Info</h1>
+            <hr width="100%"><br>
+            <p>Email: <a href="mailto:oluwakoredeadegbehingbe@gmail.com" target="_blank">oluwakoredeadegbehingbe@gmail.com</a></p>
+            <p>Phone: <a href="tel:+2348021351855" target="_blank">+2348021351855</a><br><a href="tel:+2349059033185" target="_blank">+2349059033185</a></p>
+            <p><a href="https://twitter.com/josephkorede36?s=09" target="_blank">Follow me on Twitter</a><i class="fa-brands fa-twitter fa-beat"></i></p>
+            <p><a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/" target="_blank">Connect with me on LinkedIn</a><i class="fa-brands fa-linkedin fa-beat"></i></p>
+        </div>
+
+        <form action="#" method="post" class="contact-form">
+            {% csrf_token %}
+            {% include 'constants/messages.html' %}
+            <h1>Send me a message</h1>
+            <hr><br>
+            {{ form }}
+            <input type="submit" class="btn" value="Send Message">
+        </form>
+    </section>
+
+{% endblock %}

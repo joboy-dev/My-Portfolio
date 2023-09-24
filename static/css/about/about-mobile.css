@@ -10,14 +10,14 @@ section {
     margin: 0;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
 
 /* HERO SECTION */
 #hero {
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,19 +55,29 @@ section {
 
 #about-section {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 60px;
-    height: 70vh;
+    flex: column;
+    align-items: start;
+    justify-content: start;
+    height: 130vh;
 }
 
 .my-picture {
-    height: 100%;
-    width: 130vw;
+    height: 50%;
+    width: 100%;
     background-image: url('../../images/joseph.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0 20%;
+    border-radius: 50%;
+    /* display: none; */
+}
+
+#about-section .content {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
 }
 
 #about-section .content h1 {
@@ -79,7 +89,8 @@ section {
 #about-section .content span {
     font-size: 0.7rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 5px;
     color: var(--primary-color);
     display: inline-block;
 }
@@ -94,22 +105,40 @@ section {
 /* ADDITIONAL INFORMATION */
 #additional-info {
     overflow-y: hidden;
+    padding: 5px;
+}
+
+#additional-info .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+#additional-info .heading h1 {
+    font-size: 1rem;
+}
+
+.little-underline {
+    display: none;
 }
 
 #additional-info .content {
     margin: 0 5%;
-    padding-right: 15px;
+    padding-right: 5px;
     overflow-y: auto;
     height: 90%;
 }
 
 .content div {
     margin: 3% 0;
-    padding: var(--default-padding);
-    height: 70%;
+    padding: 0 2%;
+    height: 60%;
     width: 100%;
     border-radius: 10px;
     box-shadow: var(--default-box-shadow);
+    text-align: center;
     overflow: auto;
 }
 
@@ -136,12 +165,12 @@ section {
 
 .content div:nth-of-type(even) p {
     font-size: 0.7rem;
-    font-weight: 500;
-    margin: 20px 0;
+    font-weight: 600;
+    margin: 10px 0;
 }
 
 .content div:nth-of-type(odd) p {
     font-size: 0.7rem;
-    font-weight: 500;
-    margin: 20px 0;
+    font-weight: 600;
+    margin: 10px 0;
 }

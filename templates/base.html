@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joboy Dev's Portfolio- {% block pagename %}{% endblock %}</title>
+    <title>Joboy-Dev || {% block pagename %}{% endblock %}</title>
 <!-- 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,61 +21,64 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/e883737a77.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" media="screen and (max-width:1980px)">
+    <link rel="stylesheet" href="{% static 'css/base-tab.css' %}" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="{% static 'css/base-mobile.css' %}" media="screen and (max-width:540px)">
+    
     {% block external_css %}{% endblock %}
     {% block internal_css %}{% endblock %}
 </head>
 <body>
     <div id="content">
-        <nav class="navbar" data-aos="slide-right">
+        <i class="menu-icon icon-none fa-solid fa-bars fa-beat"></i>
+
+        <nav class="navbar none" data-aos="slide-right">
+            <i class="cancel-icon icon-none fa-solid fa-x"></i>
             <div class="dark-mode">
                 <i id="dark-mode-icon" class="fa-solid fa-moon"></i>
             </div>
 
-            <div class="picture" data-aos="zoom-in"></div>
+            <div class="picture"></div>
 
             <h1 data-aos="zoom-in">Adegbehingbe, <span>Oluwakorede Joseph</span></h1>
 
-            <div class="social-links" data-aos="fade-in">
+            <div class="social-links">
                 <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/"><i class="fa-brands fa-linkedin" target="_blank"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter" target="_blank"></i></a>
+                <a href="https://twitter.com/josephkorede36?s=09"><i class="fa-brands fa-twitter" target="_blank"></i></a>
             </div>
 
-            <hr><br>
+            <hr>
 
-            <ul class="nav-links" data-aos="slide-right">
+            <ul class="nav-links">
                 <li>
-                    <i class="fa-solid fa-house fa-beat"></i>
-                    <a href="{% url 'portfolio:home' %}" id="home" class="">Home</a>
+                    <i class="fa-solid fa-house {% if active_link == 'home' %}fa-beat{% endif %}"></i>
+                    <a href="{% url 'portfolio:home' %}" id="home" class="{% if active_link == 'home' %}active{% endif %}">Home</a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-user fa-beat"></i>
-                    <a href="{% url 'portfolio:about' %}"id="about" class="">About Me</a>
+                    <i class="fa-solid fa-user {% if active_link == 'about' %}fa-beat{% endif %}"></i>
+                    <a href="{% url 'portfolio:about' %}"id="about" class="{% if active_link == 'about' %}active{% endif %}">About Me</a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-folder fa-beat"></i>
-                    <a href="#" id="projects" class="">My Projects</a>
+                    <i class="fa-solid fa-folder {% if active_link == 'projects' %}fa-beat{% endif %}"></i>
+                    <a href="{% url 'portfolio:projects' %}" id="projects" class="{% if active_link == 'projects' %}active{% endif %}">My Projects</a>
                 </li>
-                <!-- <li>
-                    <i class="fa-solid fa-server fa-beat"></i>
-                    <a href="#services-section" id="services" class="">Services</a>
-                </li> -->
                 <li>
-                    <i class="fa-solid fa-envelope fa-beat"></i>
-                    <a href="#"id="contact" class="">Contact Me</a>
+                    <i class="fa-solid fa-envelope {% if active_link == 'contact' %}fa-beat{% endif %}"></i>
+                    <a href="{% url 'portfolio:contact' %}"id="contact" class="{% if active_link == 'contact' %}active{% endif %}">Contact Me</a>
                 </li>
             </ul>
 
-            <div class="download-resume" data-aos="zoom-in">
-                <i class="fa-solid fa-download"></i>
+            <div class="download-resume">
+                <i class="fa-solid fa-download fa-bounce"></i>
                 <a href="{% static 'Adegbehingbe Oluwakorede Joseph CV.pdf' %}" download="Adegbehingbe Oluwakorede Joseph Resume">Resume</a>
             </div>
 
-            <p class="copyright">&copy; Copyright <b>{{ year }}</b>, <em>Joboy-dev</em></p>
+            <footer>
+                <p class="copyright">&copy; Copyright <b>{{ year }}</b>, <em>Joboy-dev</em></p>
+            </footer>
         </nav>
-
+        
         <div class="body">
             {% block body %}{% endblock %}
         </div>
@@ -83,5 +86,6 @@
 
     <script src="{% static 'js/dark_mode_switch.js' %}"></script>
     <script src="{% static 'js/load_aos.js' %}"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
 </body>
 </html>

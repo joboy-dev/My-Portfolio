@@ -10,14 +10,14 @@ section {
     margin: 0;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    width: 50%;
+    width: 40%;
     text-align: center;
 }
 
 
 /* HERO SECTION */
 #hero {
-    height: 60vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,19 +55,21 @@ section {
 
 #about-section {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 60px;
-    height: 70vh;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 30px;
+    height: 75vh;
 }
 
 .my-picture {
-    height: 100%;
-    width: 130vw;
+    height: 50%;
+    width: 40%;
     background-image: url('../../images/joseph.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 20%;
+    border-radius: 50%;
 }
 
 #about-section .content h1 {
@@ -79,7 +81,7 @@ section {
 #about-section .content span {
     font-size: 0.7rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: var(--primary-color);
     display: inline-block;
 }
@@ -106,7 +108,7 @@ section {
 .content div {
     margin: 3% 0;
     padding: var(--default-padding);
-    height: 70%;
+    height: 60%;
     width: 100%;
     border-radius: 10px;
     box-shadow: var(--default-box-shadow);

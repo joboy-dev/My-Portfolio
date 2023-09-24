@@ -1,0 +1,14 @@
+{% if messages %}
+    {% for message in messages %}
+        <div class="messages {{message.tags}}">
+            <p>{{ message }}</p>
+        </div>
+
+        <script>
+            var flash_message = document.querySelector(".messages");
+            setTimeout(function(){
+                flash_message.style.display = "none";
+            }, 5000);
+        </script>
+    {% endfor %}
+{% endif %}

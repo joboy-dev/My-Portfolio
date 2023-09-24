@@ -9,7 +9,7 @@
 }
 
 html {
-    font-size: 27px;
+    font-size: 25px;
 }
 
 /* VARIABLES */
@@ -115,7 +115,7 @@ section .head-text {
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -137,9 +137,7 @@ footer {
     bottom: 10px; */
 }
 
-
 /* CONTENT */
-
 #content {
     display: flex;
     justify-content: start;
@@ -152,7 +150,7 @@ footer {
 
 #content .navbar {
     height: 100%;
-    width: 20%;
+    width: 55%;
     padding: 2%;
     background-color: var(--primary-color);
     position: relative;
@@ -161,29 +159,27 @@ footer {
     overflow-y: auto;
 }
 
+.menu-icon {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    z-index: 1002;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.cancel-icon {
+    color: white;
+}
+
 #content .body {
     height: 100%;
     width: 100%;
     overflow-y: auto;
     color: var(--dark-color);
     z-index: 1000;
+    position: relative;
 }
-
-/* #content .body .menu-icon {
-    display: none;
-}
-
-#content .body .cancel-icon {
-    display: none;
-} */
-
-/* .menu-icon {
-    display: none;
-}
-
-.cancel-icon {
-    display: none;
-} */
 
 .dark-mode {
     background-color: var(--background-light);
@@ -217,7 +213,7 @@ footer {
 
 .navbar h1 {
     color: var(--secondary-color);
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: center;
     margin: 20px 0;
 }
@@ -240,7 +236,7 @@ footer {
 .navbar .social-links a {
     text-decoration: none;
     color: var(--primary-color);
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     transition: var(--default-trnasition);
 }
 
@@ -260,14 +256,14 @@ footer {
     display: flex;
     align-items: center;
     gap: 40px;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     opacity: 0.9;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     transition: var(--default-trnasition);
 }
 
@@ -307,14 +303,6 @@ footer {
     font-weight: bold;
 }
 
-.navbar .copyright {
-    color: white;
-    position: absolute;
-    bottom: 17px;
-    margin: 0 auto;
-    font-size: 0.65rem;
-}
-
-.icon-none {
+.none{
     display: none;
 }

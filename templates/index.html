@@ -4,7 +4,9 @@
 {% block pagename %}My Profile{% endblock %}
 
 {% block external_css %}
-    <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index/index.css' %}" media="screen and (max-width:1980px)">
+    <link rel="stylesheet" href="{% static 'css/index/index-tab.css' %}" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="{% static 'css/index/index-mobile.css' %}" media="screen and (max-width:540px)">
 {% endblock %}
 
 {% block body %}
@@ -14,8 +16,8 @@
             <h1>ADEGBEHINGBE <br> <span>Oluwakorede Joseph</span></h1>
             <p>I am a <span>Python Developer and Flutter Developer</span></p>
         </div>
-
         <div class="my-picture" data-aos="zoom-in"></div>
+        
     </section>
     <!-- END HERO -->
 
@@ -30,15 +32,15 @@
             <div class="about-content">
                 <div class="my-picture"></div>
                 <p>
-                    I am a computer scientist who recenty graduated from Babcock University. I am also a very passionate and results-driven Python and Flutter developer with over 2 years of hands-on coding experience. I specialize in creating web and mobile applications that not only look great but also deliver exceptional user experiences because I believe that I won't want other people to use a product that I myself won't enjoy.
+                    I am a computer scientist who graduated from Babcock University. I am also a very passionate and results-driven Python and Flutter developer with over 2 years of hands-on coding experience. I specialize in creating web and mobile applications that not only look great but also deliver exceptional user experiences because I believe that I won't want other people to use a product that I myself won't enjoy.
                 </p>
 
-                <a href="#" class="btn">See more</a>
+                <a href="{% url 'portfolio:about' %}" class="btn">See more</a>
 
             </div>
         </div>
 
-        <hr>
+        <hr class="section-break">
     </section>
     <!-- END ABOUT -->
 
@@ -56,50 +58,48 @@
         <div class="container">
             <div class="project-details">
                 <div class="cover-image">
-                    <img src="{% static 'images/project-sample.jpg' %}" loadinf="lazy" alt="pic">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
                 </div>
-                <a href="#" class="project-name">Project Name</a>
-                <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque, numquam quis pariatur esse similique magni fuga autem earum velit nostrum officia assumenda?</p>
+                <div>
+                    <p href="#" class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
 
-                <div class="links">
+                <!-- <div class="links">
                     <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/" target="_blank"><i class="fa-brands fa-postman"></i>Postman Docs</a>
                     <a href="#" target="_blank">Live Demo</a>
-                </div>
+                </div> -->
             </div>
 
             <div class="project-details">
                 <div class="cover-image">
-                    <img src="{% static 'images/project-sample.jpg' %}" loadinf="lazy" alt="pic">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
                 </div>
-                <a href="#" class="project-name">Project Name</a>
-                <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque, numquam quis pariatur esse similique magni fuga autem earum velit nostrum officia assumenda?</p>
-
-
-                <div class="links">
-                    <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/" target="_blank"><i class="fa-brands fa-postman"></i>Postman Docs</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                <div>
+                    <p class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
                 </div>
+
             </div>
 
             <div class="project-details">
                 <div class="cover-image">
-                    <img src="{% static 'images/project-sample.jpg' %}" loadinf="lazy" alt="pic">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
                 </div>
-                <a href="#" class="project-name">Project Name</a>
-                <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque, numquam quis pariatur esse similique magni fuga autem earum velit nostrum officia assumenda?</p>
 
-                <div class="links">
-                    <a href="https://www.github.com/joboy-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/oluwakorede-adegbehingbe-242901274/" target="_blank"><i class="fa-brands fa-postman"></i>Postman Docs</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                <div>
+                    <p href="#" class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="{% url 'portfolio:projects' %}" class="btn">See more</a>
 
-        <hr>
+        <hr class="section-break">
     </section>
     <!-- END PROJECTS -->
 
@@ -183,8 +183,8 @@
                 </div>
             </div>
         </div>
-
-        <hr>
+        
+        <hr class="section-break">
     </section>
     <!-- END MY SERVICES -->
 
@@ -200,20 +200,9 @@
             <div>
                 <p class="head-text">I am always looking for new opportunities to learn and grow in the software industry.<br>If you have any questions or you would like more information as to what I do, feel free to reach out.</p>
 
-                <a href="#" class="btn">Contact Me</a>
+                <a href="{% url 'portfolio:contact' %}" class="btn">Contact Me</a>
             </div>
         </div>
     </section>
     <!-- END CONTACT -->
 {% endblock %}
-
-
-
-<!-- What I Bring to the Table
-
-Expertise in Python: I have a strong command of Python and its frameworks, enabling me to develop robust back-end solutions, data analysis tools, and more.
-
-Flutter Mastery: My proficiency in Flutter allows me to build cross-platform mobile apps with a single codebase, ensuring efficiency and consistency.
-
-Problem Solver: I thrive on tackling complex challenges and finding innovative solutions that exceed client expectations. -->
-

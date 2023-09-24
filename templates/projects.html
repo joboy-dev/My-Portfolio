@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagename %}My Projects{% endblock %}
+
+{% block external_css %}
+    <link rel="stylesheet" href="{% static 'css/projects/projects.css' %}" media="screen and (max-width:1980px)">
+    <link rel="stylesheet" href="{% static 'css/projects/projects-tab.css' %}" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="{% static 'css/projects/projects-mobile.css' %}" media="screen and (max-width:540px)">
+{% endblock %}
+
+{% block body %}
+    <!-- HERO -->
+    <section id="hero" class="light-theme-background">
+        <div class="hero-content" data-aos="fade-in">
+            <i class="fa-solid fa-code"></i>
+            <h1>MY PROJECTS</h1>
+            <p>These are the projects I have worked on during my time in the software development industry. <br><br>Feel free to take a look.</p>
+        </div>
+    </section>
+    <!-- END HERO -->
+
+    <!-- PROJECTS -->
+    <section id="my-projects">
+        <div class="heading">
+            <i class="fa-solid fa-folder"></i>
+            <h1>ALL PROJECTS</h1>
+        </div>
+        <div class="little-underline"></div>
+
+        <div class="container">
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
+                </div>
+                <div>
+                    <p href="#" class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
+                </div>
+                <div>
+                    <p class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+
+            </div>
+
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
+                </div>
+
+                <div>
+                    <p href="#" class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
+                </div>
+
+                <div>
+                    <p href="#" class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <div class="cover-image">
+                    <img src="{% static 'images/project-sample.jpg' %}" loading="lazy" alt="pic">
+                </div>
+
+                <div>
+                    <p href="#" class="project-name">Project Name</p>
+                    <p>Project Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi amet provident fugit iure sunt, illo optio doloremque.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+            </div>
+        </div>
+
+    <!-- END PROJECTS -->
+
+{% endblock %}

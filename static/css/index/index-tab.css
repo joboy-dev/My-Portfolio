@@ -1,39 +1,3 @@
-/* GENERIC STYLING */
-
-/* section {
-    padding: var(--default-padding);
-    background-color: var(--background-light);
-    color: var(--text-light);
-    height: 100vh;
-    position: relative;
-}
-
-section .heading {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 40px;
-    font-size: 50px;
-}
-
-section .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-} 
-
-section h1 {
-    font-size: 50px;
-    font-weight: 900;
-}
-
-section .head-text {
-    font-size: 20px;
-    margin: 30px 0;
-    font-weight: 500;
-} */
-
 section h1:not(:first-of-type) {
     text-transform: capitalize;
     font-weight: bold;
@@ -51,6 +15,7 @@ section h1:not(:first-of-type) {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column-reverse;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,6 +37,7 @@ section h1:not(:first-of-type) {
     color: var(--text-light);
     font-weight: 900;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .details h1 span {
@@ -82,6 +48,7 @@ section h1:not(:first-of-type) {
     color: var(--text-light);
     font-weight: bolder;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .details p span {
@@ -90,8 +57,8 @@ section h1:not(:first-of-type) {
 }
 
 .my-picture {
-    height: 500px;
-    width: 550px;
+    height: 400px;
+    width: 50%;
     background-image: url('../../images/joseph.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
@@ -122,7 +89,7 @@ section h1:not(:first-of-type) {
     padding: 2% 5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
@@ -133,8 +100,8 @@ section h1:not(:first-of-type) {
 }
 
 #about-section .container .about-content .my-picture {
-   height: 50%;
-   width: 250px;
+   height: 250px;
+   width: 50%;
    margin: 0 auto;
    margin-bottom: 20px;
    border-radius: 50%;
@@ -144,19 +111,19 @@ section h1:not(:first-of-type) {
 /* PROJECTS SECTION */
 
 #projects-section {
-    height: 100vh;
+    height: 130vh;
 }
 
 #projects-section .container {
-    height: 70%;
+    height: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px 30px;
     align-items: start;
 }
 
 .project-details {
-    height: 90%;
+    height: 100%;
     width: 100%;
     background-color: var(--secondary-color);
     border-radius: 10px;
@@ -172,6 +139,7 @@ section h1:not(:first-of-type) {
 .cover-image {
     width: 100%;
     height: 50%;
+    margin-bottom: 20px;
 }
 
 .cover-image img {
@@ -183,18 +151,28 @@ section h1:not(:first-of-type) {
 .project-details p {
     padding: var(--default-padding);
     color: var(--primary-color);
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 700;
     text-align: left;
-    font-weight: 600;
 }
 
 .project-details p.project-name {
-    padding: var(--default-padding);
+    /* padding: var(--default-padding); */
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 900;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
+    /* margin-bottom: 20px; */
     transition: var(--default-trnasition);
+}
+
+.project-details div:nth-child(2) {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
 }
 
 .project-details a.view-btn {
@@ -212,38 +190,6 @@ section h1:not(:first-of-type) {
     scale: 1.05;
 }
 
-.project-details .links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: var(--default-padding);
-    position: absolute;
-    bottom: 5%;
-}
-
-.project-details .links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 0.6rem;
-    opacity: 0.8;
-    font-weight: bold;
-}
-
-.project-details .links a:hover {
-    scale: 1.1;
-    opacity: 1;
-}
-
-.project-details div:nth-child(2) {
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 10px;
-}
-
 #projects-section .btn {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -255,12 +201,12 @@ section h1:not(:first-of-type) {
 /* SERVICES SECTION */
 
 #services-section {
-    height: 140vh;
+    height: 125vh;
 }
 
 #services-section .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -273,12 +219,11 @@ section h1:not(:first-of-type) {
     background-color: var(--primary-color);
     border-radius: 10px;
     box-shadow: var(--default-box-shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    align-items: start;
     justify-content: space-evenly;
     color: var(--secondary-color);
-    padding: 0 5%;
+    padding: 2%;
 }
 
 .service:hover {
@@ -294,7 +239,7 @@ section h1:not(:first-of-type) {
 }
 
 .service i {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0 auto;
 }
 
@@ -308,27 +253,26 @@ section h1:not(:first-of-type) {
 .service-content h2 {
     font-weight: bolder;
     text-align: center;
-    font-size: 0.8rem;
-    margin-bottom: 20px;
+    font-size: 0.7rem;
+    margin-bottom: 15px;
 }
 
 .service-content p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     margin: 2%;
     text-align: center;
-    font-weight: 600;
 }
 
 .service-content h4 {
     text-align: center;
     font-size: 0.7rem;
     font-weight: bolder;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .service-content .skills {
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     opacity: 0.7;
 }
 
