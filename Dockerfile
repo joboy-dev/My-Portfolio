@@ -12,8 +12,8 @@ RUN pip install --upgrade pip
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
-COPY manage.py /app/
-RUN python manage.py collectstatic --no-input
+# COPY manage.py /app/
+# RUN python manage.py collectstatic --no-input
 
 COPY . /app/
 
