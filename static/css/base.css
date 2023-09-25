@@ -52,7 +52,7 @@ html {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: stretch;
 }
 .success {
     background-color: rgb(47, 168, 108);

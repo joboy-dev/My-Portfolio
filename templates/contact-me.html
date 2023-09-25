@@ -20,6 +20,7 @@
     <!-- END HERO -->
 
     <section id="contact-me">
+        {% include 'constants/messages.html' %}
         <div class="contact-info">
             <h1>Contact Info</h1>
             <hr width="100%"><br>
@@ -31,7 +32,6 @@
 
         <form action="#" method="post" class="contact-form">
             {% csrf_token %}
-            {% include 'constants/messages.html' %}
             <h1>Send me a message</h1>
             <hr><br>
             {{ form }}
