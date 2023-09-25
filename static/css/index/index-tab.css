@@ -198,6 +198,7 @@ section h1:not(:first-of-type) {
 
 #services-section {
     height: 125vh;
+    overflow-y: hidden;
 }
 
 #services-section .container {
@@ -207,6 +208,7 @@ section h1:not(:first-of-type) {
     align-items: center;
     justify-content: center;
     height: 80%;
+    overflow-y: auto;
 }
 
 .service {
@@ -220,10 +222,6 @@ section h1:not(:first-of-type) {
     justify-content: space-evenly;
     color: var(--secondary-color);
     padding: 2%;
-}
-
-.service:hover {
-    scale: 1.1;
 }
 
 .service .icon {
