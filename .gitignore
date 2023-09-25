@@ -3,5 +3,5 @@ migrations
 .env
 venv
 db.sqlite3
-static/media
-staticfiles
+media
+# staticfiles

@@ -1,0 +1,21 @@
+FROM python:3.11.5-slim-bullseye
+
+WORKDIR /app
+RUN mkdir staticfiles
+
+RUN pip install --upgrade pip
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+#  create gunicorn log directory
+RUN mkdir /var/log/gunicorn
+
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1
+
+EXPOSE 8000
+
+ENTRYPOINT [ "gunicorn", "my_portfolio.wsgi"]
