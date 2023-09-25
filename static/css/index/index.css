@@ -108,7 +108,6 @@ section h1:not(:first-of-type) {
 
 #about-section .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -122,33 +121,41 @@ section h1:not(:first-of-type) {
     padding: 2% 5%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#about-section .container .about-content div {
+   height: 100%;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
 #about-section .container .about-content p {
     color: var(--secondary-color);
-    text-align: center;
-    font-size: 0.8rem;
+    text-align: left;
+    font-size: 0.7rem;
 }
 
 #about-section .container .about-content .my-picture {
-   height: 50%;
-   width: 250px;
+   height: 80%;
+   width: 40%;
    margin: 0 auto;
    margin-bottom: 20px;
-   border-radius: 50%;
+   /* border-radius: 50%; */
 }
  
  
 /* PROJECTS SECTION */
 
 #projects-section {
-    height: 100vh;
+    height: 110vh;
 }
 
 #projects-section .container {
-    height: 70%;
+    height: 60%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 30px;
@@ -243,7 +250,7 @@ section h1:not(:first-of-type) {
 #projects-section .btn {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    margin: 0 2%;
+    /* margin: 0 2%; */
 }
 
 
@@ -251,7 +258,7 @@ section h1:not(:first-of-type) {
 /* SERVICES SECTION */
 
 #services-section {
-    height: 140vh;
+    height: 145vh;
 }
 
 #services-section .container {
@@ -260,7 +267,8 @@ section h1:not(:first-of-type) {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 70%;
+    width: 100%;
 }
 
 .service {

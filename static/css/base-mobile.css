@@ -132,11 +132,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.7rem;
     height: 40px;
     color: var(--secondary-color);
     /* position: absolute;
     bottom: 10px; */
+}
+
+footer p {
+    text-align: center;
 }
 
 

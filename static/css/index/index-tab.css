@@ -75,7 +75,6 @@ section h1:not(:first-of-type) {
 
 #about-section .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -93,20 +92,28 @@ section h1:not(:first-of-type) {
     flex-direction: column;
 }
 
+#about-section .container .about-content div {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
 #about-section .container .about-content p {
     color: var(--secondary-color);
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 #about-section .container .about-content .my-picture {
-   height: 250px;
-   width: 50%;
+   height: 60%;
+   width: 40%;
    margin: 0 auto;
    margin-bottom: 20px;
-   border-radius: 50%;
+   /* border-radius: 50%; */
 }
- 
  
 /* PROJECTS SECTION */
 

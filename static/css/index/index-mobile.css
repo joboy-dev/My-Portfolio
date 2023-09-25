@@ -71,38 +71,44 @@ section h1:not(:first-of-type) {
 
 #about-section .container {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-section .container .about-content {
+    height: 90%;
+    width: 65vw;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: var(--default-box-shadow);
+    padding: 2% 5%;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-#about-section .container .about-content {
-    max-height: 90%;
-    width: 100%;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    box-shadow: var(--default-box-shadow);
-    padding: 3% 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+#about-section .container .about-content div {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
 #about-section .container .about-content p {
     color: var(--secondary-color);
     text-align: center;
     font-size: 0.7rem;
-    word-wrap: break-word;
 }
 
 #about-section .container .about-content .my-picture {
-   height: 50%;
-   width: 80%;
+   height: 80%;
+   width: 40%;
    margin: 0 auto;
    margin-bottom: 20px;
-   border-radius: 50%;
    display: none;
+   /* border-radius: 50%; */
 }
 
 .about-content .btn {
