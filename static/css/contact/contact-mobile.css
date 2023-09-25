@@ -20,7 +20,7 @@
 }
 
 .light-theme-background {
-    background: linear-gradient(rgba(138, 138, 138, 0.6), rgba(247, 247, 247, 0.55)), url('../../images/contact-bg.jpg'); 
+    background: linear-gradient(rgba(138, 138, 138, 0.8), rgba(247, 247, 247, 0.4)), url('../../images/contact-bg.jpg'); 
 }
 
 .dark-theme-background {
@@ -28,8 +28,8 @@
 }
 
 #hero .hero-content {
-    /* color: var(--text-light); */
-    color: white;
+    color: var(--text-light);
+    /* color: white; */
     text-align: center;
 }
 
@@ -41,7 +41,7 @@
 
 .hero-content p {
     font-size: 0.7rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 

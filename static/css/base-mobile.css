@@ -144,7 +144,7 @@ footer {
 #content {
     display: flex;
     justify-content: start;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: var(--background-light);
     overflow: hidden;
@@ -152,7 +152,7 @@ footer {
 }
 
 #content .navbar {
-    height: 100%;
+    height: 100vh;
     width: 70%;
     padding: 2%;
     background-color: var(--primary-color);
