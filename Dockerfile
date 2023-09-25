@@ -11,6 +11,8 @@ RUN pip install --upgrade pip
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
+RUN python manage.py collectstatic --no-input
+
 COPY . /app/
 
 #  create gunicorn log directory
