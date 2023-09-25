@@ -76,6 +76,11 @@
 #my-projects .heading {
     margin-bottom: 20px;
     font-size: 1rem;
+    text-align: center;
+}
+
+#my-projects .heading h1 {
+    font-size: 1rem;
 }
 
 .project-details {

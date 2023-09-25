@@ -57,12 +57,12 @@ section {
     display: flex;
     flex: column;
     align-items: start;
-    justify-content: start;
+    justify-content: space-evenly;
     height: 130vh;
 }
 
 .my-picture {
-    height: 50%;
+    height: 100%;
     width: 100%;
     background-image: url('../../images/joseph.jpg'); 
     background-size: cover;
@@ -73,7 +73,7 @@ section {
 }
 
 #about-section .content {
-    height: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;

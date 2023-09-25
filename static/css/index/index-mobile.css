@@ -42,7 +42,7 @@ section h1:not(:first-of-type) {
 .details p {
     color: var(--text-light);
     font-weight: bolder;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
     word-wrap: break-word;
 }
@@ -91,7 +91,7 @@ section h1:not(:first-of-type) {
 
 #about-section .container .about-content p {
     color: var(--secondary-color);
-    text-align: justify;
+    text-align: center;
     font-size: 0.7rem;
     word-wrap: break-word;
 }
@@ -102,7 +102,7 @@ section h1:not(:first-of-type) {
    margin: 0 auto;
    margin-bottom: 20px;
    border-radius: 50%;
-   /* display: none; */
+   display: none;
 }
 
 .about-content .btn {
@@ -114,7 +114,7 @@ section h1:not(:first-of-type) {
 /* PROJECTS SECTION */
 
 #projects-section {
-    height: 125vh;
+    height: 150vh;
 }
 
 #projects-section .btn {
@@ -124,7 +124,7 @@ section h1:not(:first-of-type) {
 }
 
 #projects-section .container {
-    height: 65%;
+    height: 70%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px 30px;
@@ -272,7 +272,7 @@ section h1:not(:first-of-type) {
 
 /* CONTACT SECTION */
 #contact-section {
-    height: 70vh;
+    height: 90vh;
 }
 
 #contact-section .heading {
@@ -281,7 +281,7 @@ section h1:not(:first-of-type) {
 
 #contact-section .container {
     text-align: center;
-    height: 60%;
+    height: 55%;
     width: 100%;
     background-color: var(--secondary-color);
     box-shadow: var(--default-box-shadow);
