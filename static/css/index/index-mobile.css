@@ -69,15 +69,23 @@ section h1:not(:first-of-type) {
     height: 90vh;
 }
 
-#about-section .container {
+#about-section .about-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-section .about-container .container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#about-section .container .about-content {
-    height: 90%;
-    width: 65vw;
+#about-section .about-container .container .about-content {
+    height: 85%;
+    width: 85vw;
     background-color: var(--primary-color);
     border-radius: 10px;
     box-shadow: var(--default-box-shadow);
@@ -87,7 +95,7 @@ section h1:not(:first-of-type) {
     justify-content: space-evenly;
 }
 
-#about-section .container .about-content div {
+#about-section .about-container .container .about-content div {
    height: 100%;
    width: 100%;
    display: flex;
@@ -96,15 +104,15 @@ section h1:not(:first-of-type) {
    justify-content: center;
 }
 
-#about-section .container .about-content p {
+#about-section .about-container .container .about-content p {
     color: var(--secondary-color);
     text-align: center;
     font-size: 0.7rem;
 }
 
-#about-section .container .about-content .my-picture {
-   height: 80%;
-   width: 40%;
+#about-section .about-container .container .about-content .my-picture {
+   height: 100%;
+   width: 80%;
    margin: 0 auto;
    margin-bottom: 20px;
    display: none;
