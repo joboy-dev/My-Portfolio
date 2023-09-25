@@ -8,9 +8,11 @@ RUN apt-get update
 
 RUN pip install --upgrade pip
 
+# copy requirements file into the docker app then run pip command
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
+COPY manage.py /app/
 RUN python manage.py collectstatic --no-input
 
 COPY . /app/
