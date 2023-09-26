@@ -48,6 +48,10 @@
 /* CONTACT SECTION */
 #contact-me {
     height: 85vh;
+}
+
+#contact-me .container {
+    height: 100%;
     display: flex;
     align-items: start;
     justify-content: center;

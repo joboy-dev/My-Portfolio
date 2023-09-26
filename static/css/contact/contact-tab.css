@@ -46,8 +46,13 @@
 
 
 /* CONTACT SECTION */
+
 #contact-me {
     height: 100vh;
+}
+
+#contact-me .container {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;

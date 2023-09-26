@@ -1,4 +1,6 @@
 from django.db import models
+from uuid import uuid4
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Project(models.Model):
     '''Projects model'''
@@ -8,6 +10,7 @@ class Project(models.Model):
         ('J', 'Joint'),
     ]
     
+    id = models.UUIDField(default=uuid4, primary_key=True, unique=True)
     name = models.CharField(null=False, unique=True, max_length=200)
     description = models.TextField(null=False, max_length=250)
     overview = models.TextField(null=False, default='No overview for this project.')
@@ -106,12 +109,14 @@ class Skill(models.Model):
     '''Skills model'''
     
     skill_name = models.CharField(null=False, max_length=200)
-    proficiency = models.IntegerField(null=False, validators=[])
+    proficiency = models.IntegerField(null=False, validators=[MinValueValidator(0), MaxValueValidator(100)], default=0)
     
     def __str__(self):
         return f'{self.skill_name}- {self.proficiency}'
     
-    
+    class Meta:
+        ordering = ['-proficiency']
+        
 
 class Contact(models.Model):
     '''Contact form model'''

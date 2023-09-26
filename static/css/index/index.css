@@ -106,6 +106,13 @@ section h1:not(:first-of-type) {
     height: 90vh;
 }
 
+#about-section .about-container {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #about-section .container {
     display: flex;
     align-items: center;
@@ -126,7 +133,7 @@ section h1:not(:first-of-type) {
 
 #about-section .container .about-content div {
    height: 100%;
-   width: 50%;
+   width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -135,15 +142,16 @@ section h1:not(:first-of-type) {
 
 #about-section .container .about-content p {
     color: var(--secondary-color);
-    text-align: left;
+    text-align: center;
     font-size: 0.7rem;
 }
 
 #about-section .container .about-content .my-picture {
    height: 80%;
-   width: 40%;
-   margin: 0 auto;
-   margin-bottom: 20px;
+   width: 46%;
+   display: none;
+   /* margin: 0 auto; */
+   /* margin-bottom: 20px; */
    /* border-radius: 50%; */
 }
  
