@@ -8,7 +8,6 @@ class Project(models.Model):
         ('J', 'Joint'),
     ]
     
-    id = models.UUIDField(primary_key=bool, null=False)
     name = models.CharField(null=False, unique=True, max_length=200)
     description = models.TextField(null=False, max_length=250)
     overview = models.TextField(null=False, default='No overview for this project.')
