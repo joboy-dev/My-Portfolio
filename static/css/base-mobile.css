@@ -74,8 +74,9 @@ section {
     padding: var(--default-padding);
     background-color: var(--background-light);
     color: var(--text-light);
-    /* height: 100vh; */
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 section .heading {
