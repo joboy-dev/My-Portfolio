@@ -163,7 +163,7 @@ footer p {
 
 .menu-icon {
     font-size: 1rem;
-    color: var(--text-light);
+    color: var(--secondary-color);
     z-index: 1002;
     position: fixed;
     top: 10px;
@@ -171,7 +171,8 @@ footer p {
 }
 
 .cancel-icon {
-    color: white;
+    color: var(--secondary-color);
+    font-size: 1rem;
 }
 
 #content .body {
