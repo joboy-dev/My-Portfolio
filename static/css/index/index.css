@@ -293,10 +293,6 @@ section h1:not(:first-of-type) {
     padding: 0 5%;
 }
 
-.service:hover {
-    scale: 1.1;
-}
-
 .service .icon {
     display: flex;
     align-items: center;
