@@ -19,8 +19,8 @@
 }
 
 #hero .hero-content {
-    color: var(--text-light);
-    /* color: white; */
+    /* color: var(--text-light); */
+    color: white;
     text-align: center;
 }
 
