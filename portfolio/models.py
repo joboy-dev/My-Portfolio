@@ -10,6 +10,16 @@ class Project(models.Model):
         ('J', 'Joint'),
     ]
     
+    project_domain = [
+        ('None', 'None Selected'),   
+        ('Mobile App Development', 'Mobile App Development'),
+        ('Full Stack Web Development', 'Full Stack Web Development'),
+        ('Frontend Web Development', 'Frontend Web Development'),
+        ('Backend Web Development', 'Backend Web Development'),
+        ('Python Development', 'Python Development'),   
+        ('Data Science', 'Data Science'),   
+    ]
+    
     id = models.UUIDField(default=uuid4, primary_key=True, unique=True)
     name = models.CharField(null=False, unique=True, max_length=200)
     description = models.TextField(null=False, max_length=250)
@@ -17,7 +27,7 @@ class Project(models.Model):
     cover_picture = models.ImageField(null=True, upload_to='project', default='default.JPG')
     detail_cover_picture = models.ImageField(null=True, upload_to='project', default='default.JPG')
     tools = models.CharField(null=False, max_length=1000, default='')
-    domain = models.CharField(null=False, max_length=100, default='')
+    domain = models.CharField(choices=project_domain, null=False, max_length=100, default='None')
     type_of_project = models.CharField(choices=project_type, null=False, max_length=20, default='S')
     role = models.CharField(null=False, max_length=200, default='')
     github_link = models.URLField(null=False)

@@ -22,11 +22,22 @@
 
     <!-- PROJECTS -->
     <section id="my-projects">
-        <div class="heading">
-            <i class="fa-solid fa-folder"></i>
-            <h1>ALL PROJECTS</h1>
+        {% include 'constants/messages.html' %}
+        <div class="heading-container">
+            <div class="heading">
+                <i class="fa-solid fa-folder"></i>
+                <h1>ALL PROJECTS</h1>
+                <!-- <div class="little-underline"></div> -->
+            </div>
+
+            <form action="{% url 'portfolio:projects' %}" method="post">
+                {% csrf_token %}
+                <div class="form-field">
+                    {{ form }}
+                    <input type="submit" value="Filter">
+                </div>
+            </form>
         </div>
-        <div class="little-underline"></div>
 
         <div class="container">
             <div class="project-details">

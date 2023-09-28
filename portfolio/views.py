@@ -11,7 +11,7 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-from .forms import ContactForm
+from .forms import ContactForm, SearchProjectForm
 from .models import Contact, Project
 
 
@@ -42,8 +42,27 @@ class ProjectsView(View):
     '''View for projects page'''
     
     def get(self, request):
+        form = SearchProjectForm()
         context['active_link'] = 'projects'
+        context['form'] = form
         return render(request, 'projects.html', context)
+    
+    def post(self, request):
+        # domain = request.POST['domain']
+        form = SearchProjectForm(request.POST)
+        
+        if form.is_valid():
+            domain = form.cleaned_data['domain']
+            
+            if domain == 'None':
+                messages.error(request, 'Please select a domain')
+            else:
+                messages.success(request, f"Filtered by '{domain}'")
+                
+            return redirect(reverse_lazy('portfolio:projects'))
+        
+        return render(request, 'projects.html', context)
+        
     
 
 class ContactMeView(View):
@@ -118,5 +137,7 @@ class GetProjectDetailsView(View):
     
     def get(self, request):
         context['active_link'] = 'projects'
+        
         return render(request, 'project-detail.html', context)
+        
 
